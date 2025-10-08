@@ -62,20 +62,45 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```json
 {
   "email": "user@example.com",
-  "username": "username",
-  "password": "password123"
+  "username": "user1",
+  "password": "password123",
+  "profile": {
+    "full_name": "Иван Иванов",
+    "age": 32,
+    "gender": "male",
+    "current_weight": 82.5,
+    "height": 180,
+    "goal": 3,
+    "activity": 2,
+    "special_needs": 1,
+    "desired_weight": 78,
+    "tastes": 4
+  }
 }
 ```
 
 **Ответ:**
 ```json
 {
-  "id": 1,
   "email": "user@example.com",
-  "username": "username",
+  "username": "user1",
+  "id": 1,
   "is_active": true,
-  "created_at": "2024-01-01T12:00:00",
-  "updated_at": null
+  "created_at": "2025-10-08T04:27:05",
+  "updated_at": null,
+  "profile": {
+    "full_name": "Иван Иванов",
+    "age": 32,
+    "gender": "male",
+    "current_weight": 82.5,
+    "height": 180.0,
+    "goal": 3,
+    "activity": 2,
+    "special_needs": 1,
+    "desired_weight": 78.0,
+    "tastes": 4,
+    "id": 1
+  }
 }
 ```
 
