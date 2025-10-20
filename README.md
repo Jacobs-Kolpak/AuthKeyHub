@@ -55,7 +55,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 ### Аутентификация (`/api/v1/auth`)
 
-#### `POST /api/v1/auth/register`
+#### `POST /api/jacobs/auth/register`
 Регистрация нового пользователя.
 
 **Тело запроса:**
@@ -104,7 +104,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 }
 ```
 
-#### `POST /api/v1/auth/login`
+#### `POST /api/jacobs/auth/login`
 Вход в систему и получение токенов.
 
 **Тело запроса:**
@@ -124,7 +124,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 }
 ```
 
-#### `POST /api/v1/auth/refresh`
+#### `POST /api/jacobs/auth/refresh`
 Обновление access токена с помощью refresh токена.
 
 **Заголовок:** `Authorization: Bearer <refresh_token>`
@@ -138,7 +138,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 }
 ```
 
-#### `GET /api/v1/auth/me`
+#### `GET /api/jacobs/auth/me`
 Получение информации о текущем пользователе (защищенный маршрут).
 
 **Заголовок:** `Authorization: Bearer <access_token>`
@@ -158,10 +158,10 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 }
 ```
 
-#### `POST /api/v1/auth/logout`
+#### `POST /api/jacobs/auth/logout`
 Выход из системы (клиент должен удалить токены).
 
-#### `GET /api/v1/auth/status`
+#### `GET /api/jacobs/auth/status`
 Проверка работы системы аутентификации.
 
 ## Настройка .env
